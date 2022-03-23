@@ -53,7 +53,7 @@ class ExtraetfETF:
         self.Price = dom.xpath(Price_xpath)[0].text
 
         #Performance Information
-        self.OneWeekPerf = dom.xpath(OneMonthPerf_xpath)[0].text
+        self.OneWeekPerf = dom.xpath(OneWeekPerf_xpath)[0].text
         self.OneMonthPerf = dom.xpath(OneMonthPerf_xpath)[0].text
         self.YTDPerf = dom.xpath(YTDPerf_xpath)[0].text
         self.FondsSize = dom.xpath(FondsSize_xpath)[0].text
@@ -76,8 +76,8 @@ class ExtraetfETF:
         return x
 
     def print(self) -> None:
-        print("ETF:\t\t\t", self.Title)
-        print("------------------------------------------------------------------------------")
+        print(self.Title)
+        print("---------------------------------------")
         print("ISIN:\t\t\t", self.ISIN)
         print("WKN:\t\t\t", self.WKN)
         print("Ticker:\t\t\t", self.Ticker)
@@ -85,8 +85,8 @@ class ExtraetfETF:
         print("Fonds Size:\t\t", self.FondsSize)
 
         #Performance Information
+        
         print("Performance:")
-        print("------------------------------------------------------------------------------")
         print("1 Week:\t\t\t", self.OneWeekPerf)
         print("1 Month:\t\t", self.OneMonthPerf)
         print("YTD:\t\t\t", self.YTDPerf)
