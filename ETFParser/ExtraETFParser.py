@@ -74,6 +74,15 @@ class ExtraetfETF:
         )
 
         return x
+    
+    def CreateString(self):
+        data = self.CreateDict()
+        string = ""
+
+        for key in data:
+            string += str(key) + ": " + str(data[key])
+            string += "\n"
+        return string
 
     def print(self) -> None:
         print(self.Title)

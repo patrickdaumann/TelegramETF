@@ -6,8 +6,12 @@ IDs = ["IE00B5BMR087", "IE00B4L5Y983", "IE00B3XXRP09", "IE00BKM4GZ66", "LU182922
 
 ETFs = []
 
-for id in IDs:
-    etf = ExtraetfETF(id) #Objekt der Klasse ExtraetfETF erzeugen
-    etf.parse() #Daten holen
-    etf.print() #Daten ausgeben (optional)
-    ETFs.append(etf)
+# for id in IDs:
+#     etf = ExtraetfETF(id) #Objekt der Klasse ExtraetfETF erzeugen
+#     etf.parse() #Daten holen
+#     etf.print() #Daten ausgeben (optional)
+#     ETFs.append(etf)
+
+etf = ExtraetfETF("IE00B5BMR087")
+etf.parse()
+print(etf.CreateString())
